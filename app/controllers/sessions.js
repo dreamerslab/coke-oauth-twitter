@@ -1,4 +1,4 @@
-var Application = require( CONTROLLER_DIR + 'application' );
+var Application = require( CONTROLLER_DIR + '/application' );
 var passport    = require( 'passport' );
 var mongoose    = require( 'mongoose' );
 var User        = Model( 'User' );
@@ -22,7 +22,7 @@ module.exports = Application.extend({
     failureRedirect : '/'
   }),
 
-  'new' : passport.authenticate( 'twitter' ),
+  new : passport.authenticate( 'twitter' ),
 
   create : function ( req, res, next ){
     var referer = req.cookies.referer ?

@@ -4,19 +4,18 @@ var Schema = function ( Schema ){
  * Module dependencies.
  * @private
  */
-
   var ObjectId = Schema.ObjectId;
 
   var Models = {
 
     User : new Schema({
-      twitter_id : { type : String },
+      twitter_id : { type : String, required : true, index : true },
       name       : { type : String, required : true },
       lang       : { type : String, 'default' : 'en' },
       avatar     : { type : String, required : true },
       created_at : { type : Number, 'default' : Date.now },
-      updated_at : { type : Number, 'default' : Date.now }
-    }),
+      updated_at : { type : Number }
+    })
   };
 
   // auto update `updated_at` on save
@@ -24,7 +23,8 @@ var Schema = function ( Schema ){
     if( Models[ model ].tree.updated_at !== undefined ){
       Models[ model ].pre( 'save', function ( next ){
         this.updated_at = this.isNew?
-          this.created_at : Date.now();
+          this.created_at :
+          Date.now();
 
         next();
       });

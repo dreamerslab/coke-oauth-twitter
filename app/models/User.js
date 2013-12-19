@@ -12,7 +12,7 @@ module.exports = {
         if( err )  return next( err );
         if( user ) return created( user );
 
-        user = new self({
+        new self({
           twitter_id : twitter_id,
           name       : args.name,
           lang       : args.lang,
