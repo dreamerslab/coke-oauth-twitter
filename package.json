@@ -4,7 +4,7 @@
   "private"     : true,
   "dependencies": {
     "body-parser"        : "1.2.0",
-    "coke"               : "0.20.3",
+    "coke"               : "0.20.4",
     "cookie-parser"      : "1.1.0",
     "connect-mongo"      : "0.4.1",
     "connect-multiparty" : "1.0.3",
@@ -18,13 +18,12 @@
     "node.class"         : "1.1.4",
     "passport"           : "0.1.18",
     "passport-twitter"   : "1.0.2",
+    "serve-favicon"      : "2.0.0",
+    "serve-static"       : "1.1.0",
     "sitemap"            : "0.7.2",
     "socket.io"          : "0.9.17"
   },
-  "devDependencies": {
-    "serve-favicon" : "2.0.0",
-    "serve-static"  : "1.1.0"
-  },
+  "devDependencies": {},
   "main"   : "server",
   "engines": [ "node >= 0.8.0" ]
 }
