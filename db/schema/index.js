@@ -11,6 +11,7 @@ var Schema = function ( Schema ){
     User : new Schema({
       twitter_id : { type : String, required : true, index : true },
       name       : { type : String, required : true },
+      email      : { type : String },
       lang       : { type : String, 'default' : 'en' },
       avatar     : { type : String, required : true },
       created_at : { type : Number, 'default' : Date.now },

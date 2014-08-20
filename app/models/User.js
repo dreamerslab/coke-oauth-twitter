@@ -24,6 +24,15 @@ module.exports = {
           created( user );
         });
       });
+    },
+
+    create_or_update : function ( user, props, callback ){
+      user.name       = props.name;
+      user.email      = props.email;
+      user.twitter_id = 'x';
+      user.lang       = 'en';
+      user.avatar     = 'nothing';
+      user.save( callback );
     }
   }
 };
